@@ -1,0 +1,34 @@
+{
+  "name": "CHANGEME",
+  "vendor": "vtex",
+  "version": "0.0.1",
+  "title": "CHANGEME",
+  "description": "CHANGEME",
+  "billingOptions": {
+    "termsURL": "",
+    "support": {
+      "url": "https://support.vtex.com/hc/requests"
+    },
+    "free": true
+  },
+  "builders": {
+    "react": "3.x",
+    "store": "0.x",
+    "pixel": "0.x"
+  },
+  "dependencies": {
+    "vtex.pixel-interfaces": "1.x"
+  },
+  "settingsSchema": {
+    "title": "APP NAME",
+    "type": "object",
+    "properties": {
+      "gtmId": {
+        "title": "SAMPLE FIELD",
+        "description": "Enter the ID (GTM-XXXX) from your Google Tag Manager",
+        "type": "string"
+      }
+    }
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}
