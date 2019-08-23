@@ -1,4 +1,4 @@
-# <APPNAME>
+# APPNAME
 
 Open the VTEX APP Store and install the app on your store.
 
