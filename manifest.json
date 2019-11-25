@@ -1,5 +1,5 @@
 {
-  "name": "CHANGEME",
+  "name": "YOUR APP NAME",
   "vendor": "vtex",
   "version": "0.0.1",
   "title": "CHANGEME",
@@ -20,7 +20,7 @@
     "vtex.pixel-interfaces": "1.x"
   },
   "settingsSchema": {
-    "title": "APP NAME",
+    "title": "YOUR APP NAME",
     "type": "object",
     "properties": {
       "gtmId": {
