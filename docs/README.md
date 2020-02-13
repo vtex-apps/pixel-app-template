@@ -1,8 +1,10 @@
-First of all (even before the app's name), its README.md should contain the following sentence at the very beginning:
-
-`📢 Use this project, [contribute](https://github.com/{OrganizationName}/{AppName}) to it or open issues to help evolve it using [Store Discussion](https://github.com/vtex-apps/store-discussion).`
+📢 Use this project, [contribute](https://github.com/vtex-apps/CHANGEME) to it or open issues to help evolve it using [Store Discussion](https://github.com/vtex-apps/store-discussion).
 
 # APP NAME
+
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Under the app's name, you should explain the topic, giving a **brief description** of the **app's functionality** in a store.
 
@@ -10,7 +12,7 @@ Next, you can **add media** (either an image of a GIF) if possible, so that user
 
 ![Media Placeholder](https://user-images.githubusercontent.com/52087100/71204177-42ca4f80-227e-11ea-89e6-e92e65370c69.png)
 
-## Configuration 
+## Configuration
 
 In this section, you first must **add the primary instructions** that will allow users to use the app in their store, such as [installing the app](https://vtex.io/docs/recipes/store/installing-an-app) and configuring it using the account's admin. 
 
@@ -22,5 +24,15 @@ There are scenarios in which an app can behave differently in a store, according
 
 If you feel compelled to give further details, such as the app's **relationship with others**, don't hesitate to use this section. 
 
----
+## Contributors ✨
 
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
