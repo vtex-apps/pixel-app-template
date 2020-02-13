@@ -7,9 +7,12 @@ export interface PixelMessage extends MessageEvent {
     | ProductImpressionData
     | AddToCartData
     | RemoveToCartData
+    | CartChangedData
     | HomePageInfo
     | ProductPageInfoData
     | SearchPageInfoData
+    | UserData
+    | CartIdData
 }
 
 export interface EventData {
@@ -26,12 +29,30 @@ export interface PageInfoData extends EventData {
   pageUrl: string
 }
 
+export interface UserData extends PageInfoData {
+  eventType: 'userData'
+  eventName: 'vtex:userData'
+  firstName?: string
+  lastName?: string
+  document?: string
+  id?: string
+  email?: string
+  phone?: string
+  isAuthenticated: boolean
+}
+
+export interface CartIdData extends PageInfoData {
+  eventType: 'cartId'
+  eventName: 'vtex:cartId'
+  cartId: string
+}
+
 export interface HomePageInfo extends PageInfoData {
   eventType: 'homeView'
 }
 
 export interface ProductPageInfoData extends PageInfoData {
-  eventType: 'productView'
+  eventType: 'productPageInfo'
 }
 
 export interface SearchPageInfoData extends PageInfoData {
@@ -81,6 +102,12 @@ export interface RemoveToCartData extends EventData {
   items: CartItem[]
 }
 
+export interface CartChangedData extends EventData {
+  event: 'cartChanged'
+  eventName: 'vtex:cartChanged'
+  items: CartItem[]
+}
+
 export interface OrderPlacedData extends Order, EventData {
   event: 'orderPlaced'
   eventName: 'vtex:orderPlaced'
@@ -116,6 +143,8 @@ interface CartItem {
   productRefId: string
   brand: string
   category: string
+  detailUrl: string
+  imageUrl: string
 }
 
 export interface Order {
