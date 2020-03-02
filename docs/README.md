@@ -6,7 +6,7 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-Under the app's name, you should explain the topic, giving a **brief description** of the **app's functionality** in a store.
+Under the app's name, you should explain the topic, giving a **brief description** of the **app's functionality** (what is it for?) in a store.
 
 Next, you can **add media** (either an image of a GIF) if possible, so that users can better understand how the app works in practice. 
 
