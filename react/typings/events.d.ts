@@ -3,6 +3,7 @@ export interface PixelMessage extends MessageEvent {
     | ProductViewData
     | ProductClickData
     | OrderPlacedData
+    | OrderPlacedTrackedData
     | PageViewData
     | ProductImpressionData
     | AddToCartData
@@ -113,6 +114,11 @@ export interface OrderPlacedData extends Order, EventData {
   eventName: 'vtex:orderPlaced'
 }
 
+export interface OrderPlacedTrackedData extends Order, EventData {
+  event: 'orderPlacedTracked'
+  eventName: 'vtex:orderPlacedTracked'
+}
+
 export interface ProductViewData extends EventData {
   event: 'productView'
   eventName: 'vtex:productView'
@@ -169,6 +175,7 @@ export interface Order {
   transactionCurrency: string
   transactionPaymentType: PaymentType[]
   transactionShippingMethod: ShippingMethod[]
+  transactionLatestShippingEstimate: Date
   transactionProducts: ProductOrder[]
   transactionPayment: {
     id: string
