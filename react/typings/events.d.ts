@@ -215,6 +215,7 @@ export interface ProductOrder {
   sellingPrice: number
   tax: number
   quantity: number
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   components: any[]
   measurementUnit: string
   unitMultiplier: number
@@ -243,7 +244,7 @@ export interface ProductSummary extends Product {
 
 export interface ProductDetail extends Product {
   categoryId: string
-  categoryTree: { id: string; name: string }[]
+  categoryTree: Array<{ id: string; name: string }>
   selectedSku: Item
 }
 
