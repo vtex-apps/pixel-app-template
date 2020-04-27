@@ -154,16 +154,24 @@ interface CartItem {
 }
 
 export interface Order {
-  currency: string
   accountName: string
+  corporateName: string
+  coupon: string
+  currency: string
+  openTextField: string
   orderGroup: string
   salesChannel: string
-  coupon: string
-  visitorType: string
-  visitorContactInfo: string[]
-  visitorAddressState: string
+  visitorAddressCity: string
+  visitorAddressComplement: string
   visitorAddressCountry: string
+  visitorAddressNeighborhood: string
+  visitorAddressNumber: string
   visitorAddressPostalCode: string
+  visitorAddressState: string
+  visitorAddressStreet: string
+  visitorContactInfo: string[]
+  visitorContactPhone: string
+  visitorType: string
   transactionId: string
   transactionDate: string
   transactionAffiliation: string
