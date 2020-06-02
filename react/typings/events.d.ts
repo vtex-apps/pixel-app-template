@@ -122,7 +122,7 @@ export interface OrderPlacedTrackedData extends Order, EventData {
 export interface ProductViewData extends EventData {
   event: 'productView'
   eventName: 'vtex:productView'
-  product: ProductDetail
+  product: Product
 }
 
 export interface ProductClickData extends EventData {
@@ -141,16 +141,17 @@ export interface ProductImpressionData extends EventData {
 }
 
 interface CartItem {
-  skuId: string
-  variant: string
-  price: number
-  name: string
-  quantity: number
-  productRefId: string
   brand: string
   category: string
   detailUrl: string
   imageUrl: string
+  name: string
+  price: number
+  productId: string
+  productRefId: string
+  quantity: number
+  skuId: string
+  variant: string
 }
 
 export interface Order {
@@ -242,33 +243,47 @@ export interface PriceTag {
   value: number
 }
 
-interface Product {
+export interface Product {
   brand: string
   brandId: string
   categories: string[]
+  categoryId: string
+  categoryTree: Array<{ id: string; name: string }>
+  detailUrl: string
+  items: Item[]
+  linkText: string
   productId: string
   productName: string
   productReference: string
-  linkText: string
-  items: Item[]
-}
-
-export interface ProductSummary extends Product {
-  sku: Item
-}
-
-export interface ProductDetail extends Product {
-  categoryId: string
-  categoryTree: Array<{ id: string; name: string }>
   selectedSku: Item
 }
 
 export interface Item {
   itemId: string
   name: string
-  ean?: string // TODO: provide this info at productImpression
+  ean: string
   referenceId: { Key: string; Value: string }
-  seller?: Seller
+  imageUrl: string
+  sellers: Seller[]
+}
+
+export interface ProductSummary {
+  brand: string
+  brandId: string
+  categories: string[]
+  items: ItemSummary[]
+  linkText: string
+  productId: string
+  productName: string
+  productReference: string
+  sku: ItemSummary
+}
+
+interface ItemSummary {
+  itemId: string
+  ean: string
+  name: string
+  referenceId: { Key: string; Value: string }
   sellers: Seller[]
 }
 
