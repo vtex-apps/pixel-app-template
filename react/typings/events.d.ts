@@ -284,6 +284,7 @@ interface ItemSummary {
   ean: string
   name: string
   referenceId: { Key: string; Value: string }
+  seller: Seller
   sellers: Seller[]
 }
 
