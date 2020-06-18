@@ -2,9 +2,11 @@
 
 # APP NAME
 
+<!-- DOCS-IGNORE:start -->
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
+<!-- DOCS-IGNORE:end -->
 
 Under the app's name, you should explain the topic, giving a **brief description** of the **app's functionality** (what is it for?) in a store.
 
@@ -14,9 +16,23 @@ Next, you can **add media** (either an image of a GIF) if possible, so that user
 
 ## Configuration
 
-In this section, you first must **add the primary instructions** that will allow users to use the app in their store, such as [installing the app](https://vtex.io/docs/recipes/store/installing-an-app) and configuring it using the account's admin. 
+It is possible to install in your store either by using App Store or the VTEX IO Toolbelt.
 
-Remember to also **showcase any necessary disclaimer** related to the app in this section, such as the different behavior it may display during its configuration. 
+### Using VTEX App Store
+
+1. Access the **Apps** section in your account's admin page and look for the Icommkt box;
+2. Then, click on the **Install** button;
+3. You'll see a warning message about needing to enter the necessary configurations. Scroll down and type in your **NAME OF A SETTINGS FIELD** in the `NAME OF THE APP` field.
+4. Click on **Save**.
+
+### Using VTEX IO Toolbelt
+
+1. [Install](https://vtex.io/docs/recipes/development/installing-an-app/) the `vtex.icommkt@0.x` app. You can confirm that the app has now been installed by running `vtex ls` again. 
+2. Access the **Apps** section in your account's admin page and look for the NAME OF THE APP box. Once you find it, click on the box.
+3. Fill in the `NAME OF THE APP` field with your **NAME OF THE SETTINGS FIELD**.
+4. Click on **Save**.
+
+<!-- Remember to also **showcase any necessary disclaimer** related to the app in this section, such as the different behavior it may display during its configuration. -->
 
 ## Modus Operandi *(not mandatory)*
 
@@ -24,6 +40,7 @@ There are scenarios in which an app can behave differently in a store, according
 
 If you feel compelled to give further details, such as the app's **relationship with others**, don't hesitate to use this section. 
 
+<!-- DOCS-IGNORE:start -->
 ## Contributors ✨
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
@@ -36,3 +53,4 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+<!-- DOCS-IGNORE:end -->
