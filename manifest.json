@@ -5,7 +5,7 @@
   "title": "CHANGEME",
   "description": "CHANGEME",
   "billingOptions": {
-    "termsURL": "",
+    "termsURL": "https://compliance.vtex.com/gdpr/policies/vtex-privacy-policy",
     "support": {
       "url": "https://support.vtex.com/hc/requests"
     },
