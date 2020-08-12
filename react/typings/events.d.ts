@@ -291,6 +291,7 @@ interface ItemSummary {
 export interface Seller {
   commertialOffer: CommertialOffer
   sellerId: string
+  sellerName: string
 }
 
 export interface CommertialOffer {
