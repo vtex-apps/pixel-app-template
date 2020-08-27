@@ -142,6 +142,7 @@ export interface ProductImpressionData extends EventData {
 
 interface CartItem {
   brand: string
+  ean: string
   category: string
   detailUrl: string
   imageUrl: string
