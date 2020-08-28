@@ -9,7 +9,11 @@
     "support": {
       "url": "https://support.vtex.com/hc/requests"
     },
-    "free": true
+    "free": true,
+    "type": "free",
+    "availableCountries": [
+      "*"
+    ]
   },
   "builders": {
     "react": "3.x",
