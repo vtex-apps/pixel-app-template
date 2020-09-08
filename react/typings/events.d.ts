@@ -151,6 +151,8 @@ interface CartItem {
   productId: string
   productRefId: string
   quantity: number
+  seller: string
+  sellerName: string
   skuId: string
   variant: string
 }
