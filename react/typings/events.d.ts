@@ -140,6 +140,12 @@ export interface ProductImpressionData extends EventData {
   list: string
 }
 
+export interface CartData extends EventData {
+  event: 'cart'
+  eventName: 'vtex:cart'
+  orderForm: OrderForm
+}
+
 interface CartItem {
   brand: string
   ean: string
@@ -155,6 +161,11 @@ interface CartItem {
   sellerName: string
   skuId: string
   variant: string
+}
+
+export interface OrderForm {
+  id: string
+  items: CartItem[]
 }
 
 export interface Order {
