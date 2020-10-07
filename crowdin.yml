@@ -1,0 +1,6 @@
+files:
+  - source: /messages/en.json
+    translation: /messages/%two_letters_code%.json
+  - source: '/public/metadata/messages/pt-BR.json'
+    translation: '/public/metadata/messages/%locale%.json'
+    type: 'json'
