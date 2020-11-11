@@ -14,6 +14,8 @@ export interface PixelMessage extends MessageEvent {
     | SearchPageInfoData
     | UserData
     | CartIdData
+    | PromoViewData
+    | PromotionClickData
 }
 
 export interface EventData {
@@ -144,6 +146,25 @@ export interface CartData extends EventData {
   event: 'cart'
   eventName: 'vtex:cart'
   orderForm: OrderForm
+}
+
+export interface PromoViewData extends EventData {
+  event: 'promoView'
+  eventType: 'vtex:promoView'
+  promotions: Promotion[]
+}
+
+export interface PromotionClickData extends EventData {
+  event: 'promotionClick'
+  eventType: 'vtex:promotionClick'
+  promotions: Promotion[]
+}
+
+interface Promotion {
+  id?: string
+  name?: string
+  creative?: string
+  position?: string
 }
 
 interface CartItem {
