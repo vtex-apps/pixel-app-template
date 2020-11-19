@@ -150,13 +150,13 @@ export interface CartData extends EventData {
 
 export interface PromoViewData extends EventData {
   event: 'promoView'
-  eventType: 'vtex:promoView'
+  eventName: 'vtex:promoView'
   promotions: Promotion[]
 }
 
 export interface PromotionClickData extends EventData {
   event: 'promotionClick'
-  eventType: 'vtex:promotionClick'
+  eventName: 'vtex:promotionClick'
   promotions: Promotion[]
 }
 
