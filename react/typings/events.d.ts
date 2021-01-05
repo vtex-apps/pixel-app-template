@@ -162,11 +162,11 @@ export interface PromotionClickData extends EventData {
   promotions: Promotion[]
 }
 
-export interface NewsletterSubscriptionData extends Exclude<EventData, 'currency'> {
+export interface NewsletterSubscriptionData extends EventData {
   event: 'newsletterSubscription'
-  eventName: 'vtex:newsletterSubscription',
-  name: string,
-  email: string,
+  eventName: 'vtex:newsletterSubscription'
+  name: string
+  email: string
   phone: string
 }
 
