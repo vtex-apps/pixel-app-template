@@ -16,6 +16,7 @@ export interface PixelMessage extends MessageEvent {
     | CartIdData
     | PromoViewData
     | PromotionClickData
+    | NewsletterSubscriptionData
 }
 
 export interface EventData {
@@ -159,6 +160,14 @@ export interface PromotionClickData extends EventData {
   event: 'promotionClick'
   eventName: 'vtex:promotionClick'
   promotions: Promotion[]
+}
+
+export interface NewsletterSubscriptionData extends EventData {
+  event: 'newsletterSubscription'
+  eventName: 'vtex:newsletterSubscription'
+  name: string
+  email: string
+  phone: string
 }
 
 interface Promotion {
