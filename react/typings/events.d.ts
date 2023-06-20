@@ -334,12 +334,12 @@ interface ItemSummary {
 }
 
 export interface Seller {
-  commertialOffer: CommertialOffer
+  commercialOffer: CommercialOffer
   sellerId: string
   sellerName: string
 }
 
-export interface CommertialOffer {
+export interface CommercialOffer {
   Price: number
   ListPrice: number
   AvailableQuantity: number
