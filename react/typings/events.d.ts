@@ -334,7 +334,7 @@ interface ItemSummary {
 }
 
 export interface Seller {
-  commertialOffer: CommercialOffer
+  commercialOffer: CommercialOffer
   sellerId: string
   sellerName: string
 }
