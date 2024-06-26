@@ -1,7 +1,6 @@
 <script>
   (async () => {
     try {
-      console.log("PIXEL RUNNING")
       // Utility function to safely get JSON from localStorage
       const getLocalStorageJson = (key) => {
         const value = window.localStorage.getItem(key);
@@ -31,13 +30,11 @@
         await setOrderFormCustomField(iStoreIdParam, orderFormId);
       }
 
-      console.log("DATA", iStoreIdOrderFormValue, "&", orderFormId)
       // If new order form, update local storage and custom data
       if (iStoreIdOrderFormValue != null && orderFormId !== iStoreIdOrderFormValue) {
         window.localStorage.setItem("iStoreIdOrderform", orderFormId);
         await setOrderFormCustomField(iStoreIdValue, orderFormId);
       }
-      console.log("AFTER orderform storage set")
 
       async function setOrderFormCustomField(iStoreId, orderFormId) {
         const headers = new Headers({
