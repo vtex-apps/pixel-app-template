@@ -1,7 +1,7 @@
 {
-  "name": "YOURAPPNAME",
-  "vendor": "vtex",
-  "version": "0.0.1",
+  "name": "istore-pixel",
+  "vendor": "dunnesstores",
+  "version": "0.0.4",
   "title": "CHANGEME",
   "description": "CHANGEME",
   "billingOptions": {

@@ -1,11 +1,68 @@
 <script>
-  (function() {
-    var appId = "{{settings.gtmId}}";
-    if (!appId) {
-      console.error('Warning: No APP NAME ID is defined. Please configure it in the apps admin.');
-      return
-    }
+  (async () => {
+    try {
+      console.log("PIXEL RUNNING")
+      // Utility function to safely get JSON from localStorage
+      const getLocalStorageJson = (key) => {
+        const value = window.localStorage.getItem(key);
+        return value ? JSON.parse(value) : null;
+      };
 
-    // Add script here
-  })()
+      // Get query param - ready data
+      const urlParams = new URLSearchParams(window.location.search);
+      const iStoreIdParam = urlParams.get('iStoreId');
+      //console.log("PARAM", iStoreIdParam);
+
+      // Get order form id from local storage - ready data
+      const orderForm = getLocalStorageJson("orderform");
+      const orderFormId = orderForm?.id;
+      //console.log("ORDERFORMID", orderFormId);
+
+      // Get local storage for iStoreId and iStoreIdOrderFormValue
+      const iStoreIdValue = window.localStorage.getItem("iStoreId");
+      const iStoreIdOrderFormValue = window.localStorage.getItem("iStoreIdOrderform");
+      // console.log("CUSTOM STOREID LOCALSTORAGE", iStoreIdValue);
+      // console.log("CUSTOM ORDERFORMID LOCALSTORAGE", iStoreIdOrderFormValue);
+
+      // Check if iStoreIdValue & iStoreIdOrderFormValue should be updated or not
+      if (iStoreIdParam != null && iStoreIdParam !== iStoreIdValue) {
+        window.localStorage.setItem("iStoreId", iStoreIdParam);
+        window.localStorage.setItem("iStoreIdOrderform", orderFormId);
+        await setOrderFormCustomField(iStoreIdParam, orderFormId);
+      }
+
+      console.log("DATA", iStoreIdOrderFormValue, "&", orderFormId)
+      // If new order form, update local storage and custom data
+      if (iStoreIdOrderFormValue != null && orderFormId !== iStoreIdOrderFormValue) {
+        window.localStorage.setItem("iStoreIdOrderform", orderFormId);
+        await setOrderFormCustomField(iStoreIdValue, orderFormId);
+      }
+      console.log("AFTER orderform storage set")
+
+      async function setOrderFormCustomField(iStoreId, orderFormId) {
+        const headers = new Headers({
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        });
+
+        const body = JSON.stringify({ "iStoreId": iStoreId });
+
+        const response = await fetch(`/api/checkout/pub/orderForm/${orderFormId}/customData/istore`, {
+          method: "PUT",
+          headers: headers,
+          body: body,
+          redirect: "follow"
+        });
+
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        console.log("Response from setOrderFormCustomField:", data);
+      }
+    } catch (error) {
+      console.error("Error in script execution:", error);
+    }
+  })();
 </script>
