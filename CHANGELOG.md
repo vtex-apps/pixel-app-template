@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Security
+
+- Pin vulnerable transitive dependencies to patched versions (VSC-1411174)
+
 ### Changed
 
 - Update GitHub actions/cache to v4
